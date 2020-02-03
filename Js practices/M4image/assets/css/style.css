@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.picture {
+  width: 862px;
+  height: 515px;
+  border: 2px solid #000;
+  margin: 20px auto;
+  position: relative;
+
+}
+
+.left { 
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top :0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bar {
+  width:10px;
+  height:100%;
+  background: red;
+  position: absolute;
+  left:50%;
+  top:0;
+  z-index: 2;
+}
