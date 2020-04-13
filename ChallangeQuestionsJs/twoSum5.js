@@ -10,6 +10,8 @@
  * @param {number} k
  * @return {boolean}
  */
+
+ /*
 var findTarget = function(root, k) {
     if (root === null) return false;
     let queue = [];
@@ -25,3 +27,4 @@ var findTarget = function(root, k) {
     } 
     return false;
 };
+*/
