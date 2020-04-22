@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Click Counter</title>
+</head>
+<body>
+  <button class="plus">Plus</button>
+  <p class="clickDisplay">0</p>
+  <button class="minus">Minus</button>
+  <script>
+    const clickDisplay = document.querySelector('.clickDisplay');
+    document.querySelector('.plus').addEventListener('click', onPlus);
+    document.querySelector('.minus').addEventListener('click', onMinus);
+
+    function onPlus() {
+      clickDisplay.innerText = parseInt(clickDisplay.innerText) + 1;
+    }
+    function onMinus() {
+      clickDisplay.innerText = parseInt(clickDisplay.innerText) - 1;
+    }
+  </script>
+</body>
+</html>

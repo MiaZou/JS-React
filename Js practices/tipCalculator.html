@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<title>TipCalculator</title>
+<body>
+  <div class="page">
+    <div class='calculator'>
+      <div class='title'>
+        TIP CALCULATOR
+      </div>
+      <div class='calculator-box'>
+        <h4>How much was your bill?</h4>
+        <label>$</label><input type="text" placeholder="Bill Amount" class="billPrice">
+        <h4>How was your service?</h4>
+        <select class="percentage">
+          <option value='0'>Rate your service</option>
+          <option value='20'>Amazing (20%)</option>
+          <option value='18'>Great (18%)</option>
+          <option value='15'>Ok(15%)</option>
+          <option value='10'>Poor(10%)</option>
+          <option value='5'>Horrible(0%)</option>
+          <option class="other" value='other'>Custom</option>
+        </select>
+        <br />
+        <input class="customPerc" type="text" placeholder="Enter tip %">
+        <h4>How many people are sharing the bill?</h4>
+        <input class="numPeople" type="text" placeholder="Number of People"><label>people</label>
+        <br />
+        <button class="submitBtn">Calculate</button>
+        <div class='result'>
+          <h3>Tip Amount</h3>
+          <p class='tip-result'>result</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript"> 
+    const page = document.querySelector('.page');
+    const calculator = document.querySelector('.calculator');
+    const title = document.querySelector('.title');
+    const calBox = document.querySelector('.calculator-box');
+    const submitBtn = document.querySelector('.submitBtn');
+    const billPrice = document.querySelector('.billPrice');
+    const percentage = document.querySelector('.percentage');
+    const numPeople = document.querySelector('.numPeople');
+    const resBox = document.querySelector('.result');
+    const tipRes = document.querySelector('.tip-result');
+    const customPerc = document.querySelector('.customPerc');
+
+    submitBtn.style.backgroundColor = '#310B05';
+    submitBtn.style.color = 'white';
+    submitBtn.style.fontWeight = '900';
+    submitBtn.style.width = '70px';
+    submitBtn.style.height = '30px';
+    submitBtn.style.borderRadius = '5px 5px 5px 5px';
+    customPerc.style.marginTop = '10px';
+    customPerc.style.width = '65px';
+    customPerc.style.visibility = 'hidden';
+    resBox.style.visibility = 'hidden';
+    calBox.style.backgroundColor = '#FAF7F6';
+    calBox.style.position = 'absolute';
+    calBox.style.width = '100%';
+    calBox.style.borderRadius = '0 0 15px 15px';
+    calBox.style.paddingBottom = '20px';
+    submitBtn.style.marginTop = '15px';
+    title.style.backgroundColor = "#310A04";
+    title.style.color = 'white';
+    title.style.height = '35px';
+    title.style.paddingTop = '15px';
+    title.style.borderRadius = '15px 15px 0 0';
+    calculator.style.position = 'fixed';
+    calculator.style.height = "35%";
+    calculator.style.width = '30%';
+    calculator.style.marginLeft = '35%';
+    calculator.style.marginTop = '15%';
+    calculator.style.textAlign = 'center';
+    page.style.position = 'fixed';
+    page.style.height = '100%';
+    page.style.width = '100%';
+    page.style.backgroundColor = '#7A1C0C';
+
+    percentage.addEventListener('change', displayCusBox);
+    submitBtn.addEventListener('click', subToCalc);
+
+    function displayCusBox() {
+      if (percentage.value === 'other') {
+        customPerc.style.visibility = 'visible';
+      }
+    }
+
+    function subToCalc() {
+      const bill = billPrice.value;
+      let perc = '0';
+      if (percentage.value !== 'other') perc = percentage.value;
+      else perc = customPerc.value;
+      const people = numPeople.value;
+      try {
+        if (perc != '0' && people != '0') {
+          const tip = parseFloat((bill*(perc/100))/people).toFixed(2);
+          resBox.style.visibility = 'visible';
+          tipRes.innerHTML = `$${tip} per person`;
+        } else if (perc == '0') {
+          throw "Please rate your service!";
+        } else if (people == '0') {
+          throw "Please enter number of people."
+        }
+      } catch(e) {
+        alert("Invalid calculation request.");
+      }
+      console.log
+    }
+
+  </script>
+</body>
+</html>

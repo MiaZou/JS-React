@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clock</title>
+</head>
+<body>
+  <div class="whole-clock">
+    <div class="clock">
+      <h1>Welcome to Lemon Clock</h1>
+      <h4>What time is the now?</h4>
+      <span class="time-now">Loading</span>
+      <hr />
+      <h4>AM/PM vs 24HR</h4>
+      <select class='clockSetting'>
+        <option class="amPm" value="12">AM/PM</option>
+        <option class="TFHR" value="24">24HR</option>
+      </select>
+    </div>
+    <img class='background-white' src='./white.png' />
+  </div>
+  <script>
+    const bgWhite = document.querySelector('.background-white');
+    const theClock = document.querySelector('.clock');
+    bgWhite.style.width = '100%';
+    bgWhite.style.height = '100%';
+    bgWhite.style.position = 'fixed';
+    bgWhite.style.top = '0px';
+    bgWhite.style.left = '0px';
+    bgWhite.style.zIndex = '1';
+    theClock.style.position = 'fixed';
+    theClock.style.zIndex = '2';
+    theClock.style.textAlign = 'center';
+    theClock.style.marginTop = '15%';
+    theClock.style.marginLeft = '35%';
+
+    function getTimeNow() {
+      let today = new Date();
+      let hr = today.getHours();
+      let min = today.getMinutes();
+      let sec = today.getSeconds();
+      const clockSetting = document.querySelector('.clockSetting').value;
+      let AorP = '';
+      if (clockSetting === '12') {
+        if (hr >= 12) {
+          AorP = 'PM';
+        } else {
+          AorP = 'AM';
+        }
+        if (hr > 12) {
+          hr = hr - 12;
+        }
+      } 
+      if (min < 10) {
+        min = `0${min}`;
+      }
+      if (sec < 10) {
+        sec = `0${sec}`;
+      }
+      document.querySelector('.time-now').innerText =`${hr}:${min}:${sec}${AorP}`;
+    };
+
+    const updateTime = setInterval(getTimeNow, 1000);
+
+  </script>
+</body>
+</html>
