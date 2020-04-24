@@ -1,0 +1,50 @@
+body {
+  background-color: #0897B7;
+  text-align: center;
+}
+
+.edit {
+  margin-top: 10%;
+}
+
+input {
+  width: 45%;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 16px;
+  border-radius: 5px 5px 5px 5px;
+  border-style: none;
+}
+
+button {
+  background-color: #065465;
+  width: 40px;
+  height: 35px;
+  margin-left: 3px;
+  border-radius: 5px 5px 5px 5px;
+  border-style: none;
+}
+
+li {
+  background-color: #EAEBDA;
+  list-style-type: none;
+  text-align: left;
+  font-size: 16px;
+  margin-left: 28%;
+  margin-bottom: 10px;
+  width: 40%;
+  height: 30px;
+  padding-top: 10px;
+  padding-left: 14px;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid #065465;
+}
+
+.del-item {
+  font-size: 16px;
+  text-align: center;
+  background: none;
+  float: right;
+  font-weight: 700;
+  margin-top: -6px;
+}
