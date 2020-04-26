@@ -1,0 +1,29 @@
+body {
+  background-image: url("wall.jpg");
+
+  margin-top: 15%;
+  padding-left: 20%;
+}
+
+.q0 {
+  text-align: center;}
+
+.q1,
+.q2,
+.q3,
+.score {
+  text-align: center;
+  display: none;
+}
+
+.start-btn {
+  margin-top: 15px;
+  height: 30px;
+  width: 80px;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 16px;
+}
+
+label {
+  width: 200px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pop Quiz</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div class="q0">
+      <h1>Pop Quiz</h1>
+      <h1>Ready for a pop quiz?</h1>
+      <button class="start-btn">Start</button>
+    </div>
+    <div class="q1">
+      <h1><span>Question 1: </span>When was JavaScript first created?</h1>
+        <input type="radio" class='q1c' value="1993"><label>1993</label>
+        <input type="radio" class='q1c' value="1994"><label>1994</label>
+        <input type="radio" class='q1c' value="1995"><label>1995</label>
+        <input type="radio" class='q1c' value="1996"><label>1996</label>
+        <button class="next1" value="1">Next</button>
+    </div>
+    <div class="q2">
+      <h1><span>Question 2: </span>Who created Javascript?</h1>
+        <input type="radio" class='q2c' value="James"><label>James Gosling</label>
+        <input type="radio" class='q2c' value="Bredan"><label>Bredan Eich</label>
+        <input type="radio" class='q2c' value="Hakon"><label>Hakon Wium Lie</label>
+        <input type="radio" class='q2c' value="Bill"><label>Bill Gates</label>
+        <button class="next2" value="2">Next</button>
+    </div>
+    <div class="q3">
+      <h1><span>Question 3: </span>What was JavaScript's origin name?</h1>
+        <input type="radio" class='q3c' value="Mocha"><label>Mocha</label>
+        <input type="radio" class='q3c' value="Java"><label>Java</label>
+        <input type="radio" class='q3c' value="Typescript"><label>Typescript</label>
+        <input type="radio" class='q3c' value="Script"><label>Script</label>
+        <button class="next3" value="3">Next</button>
+    </div>
+    <div class="score">
+      <h1>Your final score is </h1>
+      <h1 class='final-score'>Score</h1>
+    </div>
+    <script src="./popQuiz.js">
+    </script>
+  </body>
+</html>
