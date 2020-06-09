@@ -1,0 +1,95 @@
+Big Words Alert
+
+  - Syntax Parser: A program that reads your code and determines what it does and if its grammar is valid. 
+
+  - Lexical Environment: Where something sits physically in the code you write. Lexical environment is important because where you see things written gives you an idea of where it will actually sit in the computer's memory and how it will interact with other variables, functions, and elements of the program. The program, the compiler which converts your code to the instructions cares about where you put things. ** Where it is written and what surrounds it!
+
+  - Execution Context: A wrapper to help manage the code that's running!
+
+  - Single Threaded: One command is being executed at a time. (FYI - Under the hood of the browser, maybe not.)
+
+  - Synchronous: One at a time and in order.
+
+  - Invocation: Running a function or calling a function. In JS, by using parenthesis().
+
+  - Variable Environment: Where the variables live when they created and how they relate to each other in memory. 
+
+  - Scope: Where a variable is available in your code. If it's truly the same variable, or a new copy
+
+  - Asynchronous: more than one at a time. When dealing with code that's executing and that starts off some other code to execute, and that may start other code executing and all of those pieces of code are actually executing within the engine at the same time. 
+
+  - Dynamic Typing: You don't tell the engine what type of data a variable holds, if figures it out while your code is running. Variables can hold different types of values because it's all figured out during execution. (Static vs dynamic typing.)
+
+  - Primitive Type: A type of data that represents a single value.
+    => Undefined: represents lack of existence. (Shouldn't set as a variable)
+    => Null: represents lack of existence. (Can be set as a variable)
+    => Boolean: true of false
+    => Number: floating point number (there's always some decimals) Unlike other programming languages, only one
+    => String: a sequence of characters (both '' and "" can be used)
+    => Symbol: Used in ES6
+
+  - Operators (infix notation): A special function that is syntactically (written) differently. Generally operator take two parametors and return one result.
+
+  - Operator Precedence: which operator function gets called first. Functions are called in order of precedence (Higher precedence wins).
+
+  - Associativity - what order operator functions get called in: left-to-right or right-to-left when functions have the same precedence. 
+
+  - Coercion: Converting a value from one type to another. This happens write often in JS because it's dynamically typed.
+
+  - Namespace: A container for variables and functions. Typically to keep variables and functions with the same name separate. 
+
+  - First Class Functions: Everything you can do with other types you can do with functions. Assign them to variables, pass them around, create them on the fly.
+
+  - Expression: A unit of code that results in a value. It doesn't have to save to a variable. 
+
+  - Mutate: To change something. "Immutable" means it can't be changed.
+
+  - Arguments: The parameters you pass to a function. JS gives you a keyword of the same name which contains them all.
+
+  - Whitespace: Invisible characters that create literal 'space' in your written code. Carriage returns, tabs, spaces. 
+
+  - Callback function: A function you give to another function, to be run when the other function is finished. So the function you call (i.e. invoke), 'call back' by calling the function you gave it when it finishes. 
+
+  - Function Currying: Creating a copy of a function but with some present parameters. Very useful in mathematical situations.
+
+  - Inheritance: One object gets access to the properties and methods of another object. 
+
+  - Reflection: An object can look at itself, listening and changing its properties and methods. 
+
+  - Function constructors: A normal function that is used to construct objects. The 'this' variable points a new empty object, and that object is returned from the function automatically.
+
+  - Polyfill: code that adds a feature which the engine may lack.
+
+  - Syntactic sugar: A different way to type something that doesn't change how it works under the hood.
+
+  - Transpile: convert the syntax of one programming language, to another. In this case languages that don't really ever run anywhere, but instead are processed by 'transpilers' that generate Javascript.
+
+Conceptual Aside:
+
+  - Name/Value Pair: A Name which maps to a unique value. The name may be defined more than once, but only can have one value in any given context. That value may be more name/value pairs. 
+
+  - Object: A collection of name value pairs.
+
+  - Single Threaded Synchronous Execution: In JS, only one thing happens at a time. 
+
+  - Six Primitive Types:
+    => Undefined: represents lack of existence. (Shouldn't set as a variable)
+    => Null: represents lack of existence. (Can be set as a variable)
+    => Boolean: true of false
+    => Number: floating point number (there's always some decimals) Unlike other programming languages, only one
+    => String: a sequence of characters (both '' and "" can be used)
+    => Symbol: Used in ES6
+
+  - By Values vs by reference: 
+    => Primitives -> by value
+    => All objects (including functions) -> by reference
+
+  - Syntax Parsers - There is the intermediate program between the code and the computer that translate the code into something that the computer can understand. Syntax parser reads the code and determines if it's valid, and what it is you're trying to do. 
+
+  - Inheritance:
+    => Classical inheritance: what's currently best known and popular. It's a way of sharing methods and properties of objects. The most popular way it's been done for a long time. It could be verbose. 
+    => Prototypal inheritance: Simple, flexible, extensible, and easy to understand. 
+
+  - typeof: for []
+    => typeof [] will be object. 
+    => Object.prototype.toString.call([])  -> [object Array]

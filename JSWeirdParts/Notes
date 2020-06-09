@@ -1,0 +1,28 @@
+Execution Content (Global) - global execution context creates two things for you
+  => A Global Object
+  => A special object, called "this"
+
+Global - "Not Inside a Function"
+
+Execution Content is Created in two phases:
+  - Creation phase
+    => Set up Global object
+    => Set up 'this'
+    => create Outer environment
+    => Set up memory space for variables and functions - 'Hoisting'
+
+'Hoisting' - before your code begins to be executed line by line. The JS engine has already set aside memory space for the variables that you've created in that entire code that you've built and all of the functions you have created as well. So those functions and those variables exist in memory. So when the code begin execute, it can access them. However, when it's variables, it got set the next phase which is the execution phase. Therefore, JS engine doesn't have the value, but a placeholde for 'undefined'.
+
+It's a bad idea to rely on hoisting! 
+
+All variables are initially set as 'undefined'
+
+Undefined - a special value that is also a special keyword in JS. It's the value that variables receive during the creation phase which sets up the memory space for the value. 
+
+Execution phase - runs your code line by line. 
+
+Asynchronous function - when we asynchronously go out and make request, or let's run a function when someone clicks on a button, that's being handled asynchronously by other part of the browser while JS code is still running. 
+
+When we say JS runs synchronously meaning only JS is running synchronously. There are other parts of engines running inside the browser can also do other stuffs. 
+
+Default Values
